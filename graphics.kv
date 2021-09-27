@@ -1,0 +1,1341 @@
+<CustomScreen>:
+    principal:
+    janela_opcoes:
+    janela_opcoes2:
+
+
+<principal>:
+    name:'principal'
+    BoxLayout:
+        id: princ
+        orientation:'vertical'
+        size:1000,1200
+
+        canvas:
+            Color:
+                rgba:0,0,0,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+
+        BoxLayout:
+            id: a1                                                             #BoxA1
+            orientation:'vertical'
+            size_hint_y:0.05
+
+            BoxLayout:
+                id:a12
+
+                canvas:
+                    Color:
+                        rgba:180/255,180/255,180/255,1
+                    Rectangle:
+                        size:1196,23
+                        pos:2,625
+
+                Button:
+                    font_size:'14'
+                    text:'Ajuda'
+                    background_color:0,0,0,0
+                    color:0,0,0,1
+                    size_hint:None,None
+                    width:100
+                    height:34
+                    on_press:root.Help()
+
+        BoxLayout:
+            id: a2                                                                   #BoxA2
+            orientation:'horizontal'
+
+            BoxLayout:
+                id: a21
+                size_hint_x:0.25                                                                       #BoxB1
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a211                                    #titulo conversas
+                    size_hint_y:0.1
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,27
+                            pos:2.5,597
+
+                    BoxLayout:
+                        id: a212
+                                                                     #retangulo preto titulo conversas
+                        canvas:
+                            Color:
+                                rgba:0,0,0,1
+                            Rectangle:
+                                size:207,26
+                                pos:9.2,598
+
+                        BoxLayout:
+                            id: a213
+                                                                          #retangulo branco titulo conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255,220/255,220/255,1
+                                Rectangle:
+                                    size:205,26
+                                    pos:10.5,598
+                                Line:
+                                    points:50,50
+
+                            Label:
+                                color:0,0,0,1
+                                pos_hint_x:None
+                                text_size:self.size
+                                font_size:'14'
+                                text:'Conversas'
+                                padding_y:'39dp'
+                                padding_x:'75dp'
+
+                BoxLayout:
+                    id:a221                         #BOXB1
+                    orientation:'vertical'
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,592.5
+                            pos:2.5,3.5
+
+                    BoxLayout:
+                        id: a222                                        #retangulo preto conversas
+                        size_hint_y:0.3
+
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:207.2,588.5
+                                pos:9.2,6.8
+
+                        BoxLayout:
+                            id: a223
+                                                                   #retangulo branco conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:205,587.5
+                                    pos:10.5,8.5
+
+                            BoxLayout:
+                                id:a224
+                                orientation:'vertical'
+                                padding:[25,-10,0,0]
+                                spacing:0
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon1
+                                        size_hint_x:0.2
+
+                                        Label:
+                                            text:'>'
+                                            color:0,0,0,1
+
+                                    Button:
+                                        id: con1                               #banco de dados 1
+                                        text:'Conversa1'
+                                        font_size:'14'
+                                        color:0,0,0,1
+                                        background_color:0,0,0,0
+                                        on_press:root.retorna_banco1(), root.mudar_conversa() , root.setinha()
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon2
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con2
+                                        text:'Conversa2'                           #banco de dados 2
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+                                        on_press:root.retorna_banco2(), root.mudar_conversa(), root.setinha()
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon3
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con3
+                                        text:'Conversa3'                           #banco de dados 3
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+                                        on_press:root.retorna_banco3(), root.mudar_conversa(), root.setinha()
+
+                    BoxLayout:
+                        id:a225
+
+            BoxLayout:
+                id: a3                                                           #BoxB2
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a31
+                    orientation:'vertical'
+
+                    BoxLayout:
+                        id: a32                                 #Titulo Opcoes
+                        size_hint_y:0.1
+                        orientation:'vertical'
+                                                                #titulo conversas opcoes
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:972,26.5
+                                pos:225,597.5
+
+                        BoxLayout:
+                            id:a33
+                                                              # retangulo preto titulo conversas opcoes
+                            canvas:
+                                Color:
+                                    rgba:0,0,0,1
+                                Rectangle:
+                                    size:953.5,27
+                                    pos:233,597.5
+
+                            BoxLayout:
+                                id:a34
+                                                                     #retangulo branco titulo conversas opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255,220/255,220/255,1
+                                    Rectangle:
+                                        size:951,26.3
+                                        pos:234.5,597.5
+                                    Line:
+                                        points:50,50
+
+                                BoxLayout:
+                                    id:titulo_conversa
+                                    pos_hint_x:None
+                                    text_size:self.size
+                                    font_size:'14'
+                                    padding:[-30,0,0,5]
+
+                    BoxLayout:
+                        id: a41                                       #Opcoes de Respostas
+                        orientation:'vertical'
+
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:966,592.5
+                                pos:231.5,3.5
+
+                        BoxLayout:
+                            id: a42              #retangulo preto opcoes
+                            size_hint_y:0.3
+
+                            canvas:
+                                Color:
+                                    rgba:0,0,0, 1
+                                Rectangle:
+                                    size:953.5,389.5
+                                    pos:233,207.2
+
+                            BoxLayout:
+                                id:a43
+                                         # retangulo branco opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255, 220/255, 220/255, 1
+                                    Rectangle:
+                                        size:951,387.5
+                                        pos:234.5,208.5
+
+                                BoxLayout:
+                                    orientation:'vertical'
+                                    id: boxc1
+                                    padding:[240,5,0,-20]
+                                                                         # Codigo aqui
+                BoxLayout:
+                    id: a51
+                                     #retangulo cinza botao
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:966,192.5
+                            pos:231.5,3.5
+
+                    BoxLayout:
+                        id: a52
+                                          #retangulo preto botao
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:953.5,189.5
+                                pos:233,7.2
+
+                        BoxLayout:
+                            id: a53                      #retangulo branco botao
+                            orientation:'horizontal'
+
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:951,187.5
+                                    pos:234.5,8.5
+
+                            BoxLayout:
+                                id: a54
+                                orientation:'horizontal'
+                                padding:[150,0,0,56]
+                                spacing:0
+
+
+                                BoxLayout:
+                                    padding:[0,180,0,0]
+                                    size_hint_x:0.3
+                                    orientation:'vertical'
+                                    spacing:20
+
+                                    BoxLayout:
+                                        padding:[-80,150,0,0]
+                                        size_hint_y:0.2
+                                        Label:
+                                            text:'Nome Empresa:'
+                                            color:0,0,0,1
+                                    BoxLayout:
+                                        orientation:'horizontal'
+                                        spacing:60
+                                        BoxLayout:
+                                            BoxLayout:
+                                                id:nome_empresa
+                                                Label:
+                                                    color:0,0,1
+                                                    text:  'Nome Empresa / \n Estabelecimento'
+
+                                        BoxLayout:
+                                            Button:
+                                                height:'20dp'
+                                                width:'20dp'
+                                                size_hint:None,None
+                                                border:0,0,0,0
+                                                background_normal:'icons\\edit.png'
+                                                on_press:
+                                                    root.pop_nome_empresa()
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:175
+                                    BoxLayout:
+                                        size_hint_x:0.1
+                                        padding:[100,0,0,0]
+                                        Label:
+                                            color:0,0,0,1
+                                            font_size:30
+                                            size_hint:None,None
+                                            text:'GoZap!'
+
+                                    BoxLayout:
+                                        Button:
+                                            border:0,0,0,0
+                                            size_hint_x:None
+                                            size_hint_y:None
+                                            weight:'70sp'
+                                            height:'100sp'                                               #botao okzap
+                                            font_size:'32'
+                                            background_normal:'icons\\robozap.png'
+                                            background_down:'rocket.png'
+                                            color:0,0,0,1
+                                            on_press:
+                                                valida_licenca = root.validacao_licenca()
+                                                mac = root.valida_mac()
+
+                                                if valida_licenca == 'Arquivo Alterado': root.arquivo_alterado()
+                                                if valida_licenca == 'Impossivel': root.sem_conexao()
+                                                if valida_licenca == 'Data errada': root.data_errada()
+                                                if valida_licenca == 'Fora Validade' or valida_licenca == 'primeira validacao': root.abre_popup_senha()
+                                                if valida_licenca == 'Liberado' and mac == 'retornou true': root.start_bot()
+                                                if valida_licenca == 'nao reconhecido' : quit()
+                                                if mac == 'retornou false' : root.mac_errado()
+
+                                BoxLayout:
+                                    padding:[130,150,0,0]
+
+                                    canvas:
+                                        Color:
+                                            rgba:0,0,0,1
+                                        Rectangle:
+                                            size:151.7,43
+                                            pos:949.15,86
+                                    BoxLayout:
+                                        spacing:-110
+                                        canvas:
+                                            Color:
+                                                rgba:220/255,220/255,220/255,1
+                                            Rectangle:
+                                                size:150.8,40.9
+                                                pos:949.6,86.8
+
+                                        CheckBox:
+                                            id:calm
+                                            size_hint_x:0.02
+                                            color: 0,0,0
+                                            on_active:root.acalma_cliente(self.active)
+                                        Label:
+                                            color:0,0,0
+                                            text:'Ausente'
+
+
+<Ajuda>:
+    FloatLayout:
+        name:'Ajuda'
+        orientation:'vertical'
+
+        BoxLayout:
+            pos:22,600.5
+            canvas:
+                Color:
+                    rgba:0,0,0,1
+                Rectangle:
+                    size:82.2,43
+                    pos:8.4,581.7
+
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba:230/255,230/255,230/255,1
+                    Rectangle:
+                        size:78.2,40
+                        pos:10.3,583.7
+
+                Button:
+                    font_size:'14'
+                    text:'Ajuda'
+                    background_color:0,0,0,0
+                    color:0,0,0,1
+                    size_hint:None,None
+                    width:55
+                    height:10
+                    on_press:root.video_aula()
+
+<KeyVerify>:
+    BoxLayout:
+        orientation: 'vertical'
+        id:key
+        TextInput:
+            id:text_senha
+
+        Button:
+            id:button_edit
+            text:'Inserir Senha'
+            on_press:
+                texto = root.retorna_texto()
+                if texto != 'mantem': root.fecha_popup()
+
+<janela_opcoes>:
+    name:'janela_opcoes'
+
+    BoxLayout:
+        id: opt
+        orientation:'vertical'
+        size:1000,1200
+
+        canvas:
+            Color:
+                rgba:0,0,0,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+
+        BoxLayout:
+            id: a1                                                             #BoxA1
+            orientation:'vertical'
+            size_hint_y:0.05
+
+            BoxLayout:
+                id:a12
+
+                canvas:
+                    Color:
+                        rgba:180/255,180/255,180/255,1
+                    Rectangle:
+                        size:1196,23
+                        pos:2,625
+
+                Button:
+                    font_size:'14'
+                    text:'Ajuda'
+                    background_color:0,0,0,0
+                    color:0,0,0,1
+                    size_hint:None,None
+                    width:100
+                    height:34
+                    on_press:app.root.get_screen('principal').Help()
+
+        BoxLayout:
+            id: a2                                                                   #BoxA2
+            orientation:'horizontal'
+
+            BoxLayout:
+                id: a21
+                size_hint_x:0.25                                                                       #BoxB1
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a211                                    #titulo conversas
+                    size_hint_y:0.1
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,27
+                            pos:2.5,597
+
+                    BoxLayout:
+                        id: a212
+                                                                   #retangulo preto titulo conversas
+                        canvas:
+                            Color:
+                                rgba:0,0,0,1
+                            Rectangle:
+                                size:207,26
+                                pos:9.2,598
+
+                        BoxLayout:
+                            id: a213
+                                                                        #retangulo branco titulo conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255,220/255,220/255,1
+                                Rectangle:
+                                    size:205,26
+                                    pos:10.5,598
+                                Line:
+                                    points:50,50
+
+                            Label:
+                                color:0,0,0,1
+                                pos_hint_x:None
+                                text_size:self.size
+                                font_size:'14'
+                                text:'Conversas'
+                                padding_y:'39dp'
+                                padding_x:'75dp'
+
+                BoxLayout:
+                    id:a221                         #BOXB1
+                    orientation:'vertical'
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,592.5
+                            pos:2.5,3.5
+
+                    BoxLayout:
+                        id: a222                                        #retangulo preto conversas
+                        size_hint_y:0.3
+
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:207.2,588.5
+                                pos:9.2,6.8
+
+                        BoxLayout:
+                            id: a223
+                                                                  #retangulo branco conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:205,587.5
+                                    pos:10.5,8.5
+
+                            BoxLayout:
+                                id:a224
+                                orientation:'vertical'
+                                padding:[25,-10,0,0]
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon1
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con1                               #banco de dados 1
+                                        text:'Conversa 1'
+                                        font_size:'14'
+                                        color:0,0,0,1
+                                        background_color:0,0,0,0
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+                                    BoxLayout:
+                                        id:boxcon2
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con2
+                                        text:'Conversa 2'                           #banco de dados 2
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon3
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con3
+                                        text:'Conversa 3'                           #banco de dados 3
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+
+                    BoxLayout:
+                        id:a225
+
+            BoxLayout:
+                id: a3                                                           #BoxB2
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a31
+                    orientation:'vertical'
+
+                    BoxLayout:
+                        id: a32                                 #Titulo Opcoes
+                        size_hint_y:0.1
+                        orientation:'vertical'
+                                                                #titulo conversas opcoes
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:972,26.5
+                                pos:225,597.5
+
+                        BoxLayout:
+                            id:a33
+                                       # retangulo preto titulo conversas opcoes
+                            canvas:
+                                Color:
+                                    rgba:0,0,0,1
+                                Rectangle:
+                                    size:953.5,27
+                                    pos:233,597.5
+
+                            BoxLayout:
+                                id:a34
+                                                                     #retangulo branco titulo conversas opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255,220/255,220/255,1
+                                    Rectangle:
+                                        size:951,26.3
+                                        pos:234.5,597.5
+                                    Line:
+                                        points:50,50
+
+                                BoxLayout:
+                                    id:titulo_conversa
+                                    pos_hint_x:None
+                                    text_size:self.size
+                                    font_size:'14'
+                                    padding:[-65,-7,0,0]
+
+                    BoxLayout:
+                        id: a41                                       #Opcoes de Respostas
+                        orientation:'vertical'
+
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:966,592.5
+                                pos:231.5,3.5
+
+                        BoxLayout:
+                            id: a42              #retangulo preto opcoes
+                            size_hint_y:0.3
+
+                            canvas:
+                                Color:
+                                    rgba:0,0,0, 1
+                                Rectangle:
+                                    size:953.5,389.5
+                                    pos:233,207.2
+
+                            BoxLayout:
+                                id:a43
+                                         # retangulo branco opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255, 220/255, 220/255, 1
+                                    Rectangle:
+                                        size:951,387.5
+                                        pos:234.5,208.5
+
+                                BoxLayout:
+                                    orientation:'vertical'
+                                    id: janela_options
+                                    padding:[240,5,0,-20]
+                                                                         # Codigo aqui
+                BoxLayout:
+                    id: a51
+                                     #retangulo cinza botao
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:966,192.5
+                            pos:231.5,3.5
+
+                    BoxLayout:
+                        id: a52
+                                          #retangulo preto botao
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:953.5,189.5
+                                pos:233,7.2
+
+                        BoxLayout:
+                            id: a53                      #retangulo branco botao
+                            orientation:'horizontal'
+
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:951,187.5
+                                    pos:234.5,8.5
+
+                            BoxLayout:
+                                id: a54
+                                orientation:'horizontal'
+                                padding:[430,0,0,66]
+
+                                Label:
+                                    color:0,0,0,1
+                                    font_size:20
+                                    size_hint:None,None
+                                    text:'Voltar'
+                                                                 #botao okzap
+                                BoxLayout:
+                                    padding:[0,0,0,30]
+
+                                    Button:
+                                        pos_hint_x:None
+                                        pos_hint_y:None
+                                        size_hint_x:None
+                                        size_hint_y:None
+                                        width:'35sp'
+                                        height:'35sp'
+                                        font_size:'25'                                                           #botao okzap
+                                        background_normal:'icons\\back.png'
+                                        on_press:root.voltar()
+                                        on_press:root.manager.current ='principal'
+                                        border:0,0,0,0
+
+
+<janela_opcoes2>:
+    name:'janela_opcoes2'
+
+    BoxLayout:
+        id: opt2
+        orientation:'vertical'
+        size:1000,1200
+
+        canvas:
+            Color:
+                rgba:0,0,0,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+
+        BoxLayout:
+            id: a1                                                             #BoxA1
+            orientation:'vertical'
+            size_hint_y:0.05
+
+            BoxLayout:
+                id:a12
+
+                canvas:
+                    Color:
+                        rgba:180/255,180/255,180/255,1
+                    Rectangle:
+                        size:1196,23
+                        pos:2,625
+
+                Button:
+                    font_size:'14'
+                    text:'Ajuda'
+                    background_color:0,0,0,0
+                    color:0,0,0,1
+                    size_hint:None,None
+                    width:100
+                    height:34
+                    on_press:app.root.get_screen('principal').Help()
+
+        BoxLayout:
+            id: a2                                                                   #BoxA2
+            orientation:'horizontal'
+
+            BoxLayout:
+                id: a21
+                size_hint_x:0.25                                                                       #BoxB1
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a211                                    #titulo conversas
+                    size_hint_y:0.1
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,27
+                            pos:2.5,597
+
+                    BoxLayout:
+                        id: a212
+                                                                  #retangulo preto titulo conversas
+                        canvas:
+                            Color:
+                                rgba:0,0,0,1
+                            Rectangle:
+                                size:207,26
+                                pos:9.2,598
+
+                        BoxLayout:
+                            id: a213
+                                                                       #retangulo branco titulo conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255,220/255,220/255,1
+                                Rectangle:
+                                    size:205,26
+                                    pos:10.5,598
+                                Line:
+                                    points:50,50
+
+                            Label:
+                                color:0,0,0,1
+                                pos_hint_x:None
+                                text_size:self.size
+                                font_size:'14'
+                                text:'Conversas'
+                                padding_y:'39dp'
+                                padding_x:'75dp'
+
+                BoxLayout:
+                    id:a221                         #BOXB1
+                    orientation:'vertical'
+
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:230,592.5
+                            pos:2.5,3.5
+
+                    BoxLayout:
+                        id: a222                                        #retangulo preto conversas
+                        size_hint_y:0.3
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:207.2,588.5
+                                pos:9.2,6.8
+
+                        BoxLayout:
+                            id: a223                                        #retangulo branco conversas
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:205,587.5
+                                    pos:10.5,8.5
+
+                            BoxLayout:
+                                id:a224
+                                orientation:'vertical'
+                                padding:[25,-10,0,0]
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon1
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con1                               #banco de dados 1
+                                        text:'Conversa 1'
+                                        font_size:'14'
+                                        color:0,0,0,1
+                                        background_color:0,0,0,0
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon2
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con2
+                                        text:'Conversa 2'                           #banco de dados 2
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+
+                                BoxLayout:
+                                    orientation:'horizontal'
+                                    spacing:-105
+
+                                    BoxLayout:
+                                        id:boxcon3
+                                        size_hint_x:0.2
+
+                                    Button:
+                                        id: con3
+                                        text:'Conversa 3'                           #banco de dados 3
+                                        color:0,0,0,1
+                                        font_size:'14'
+                                        background_color:0,0,0,0
+
+                    BoxLayout:
+                        id:a225
+
+            BoxLayout:
+                id: a3                                                           #BoxB2
+                orientation:'vertical'
+
+                BoxLayout:
+                    id: a31
+                    orientation:'vertical'
+
+                    BoxLayout:
+                        id: a32                                 #Titulo Opcoes
+                        size_hint_y:0.1
+                        orientation:'vertical'
+                                                               #titulo conversas opcoes
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:972,26.5
+                                pos:225,597.5
+
+                        BoxLayout:
+                            id:a33
+                                       # retangulo preto titulo conversas opcoes
+                            canvas:
+                                Color:
+                                    rgba:0,0,0,1
+                                Rectangle:
+                                    size:953.5,27
+                                    pos:233,597.5
+
+                            BoxLayout:
+                                id:a34
+                                                                   #retangulo branco titulo conversas opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255,220/255,220/255,1
+                                    Rectangle:
+                                        size:951,26.3
+                                        pos:234.5,597.5
+                                    Line:
+                                        points:50,50
+
+                                BoxLayout:
+                                    id:titulo_conversa
+                                    color:0,0,0,1
+                                    pos_hint_x:None
+                                    text_size:self.size
+                                    font_size:'14'
+                                    padding:[-65,-7,0,0]
+
+                    BoxLayout:
+                        id: a41                                       #Opcoes de Respostas
+                        orientation:'vertical'
+
+                        canvas:
+                            Color:
+                                rgba:180/255,180/255,180/255,1
+                            Rectangle:
+                                size:966,592.5
+                                pos:231.5,3.5
+
+                        BoxLayout:
+                            id: a42              #retangulo preto opcoes
+                            size_hint_y:0.3
+
+                            canvas:
+                                Color:
+                                    rgba:0,0,0, 1
+                                Rectangle:
+                                    size:953.5,389.5
+                                    pos:233,207.2
+
+                            BoxLayout:
+                                id:a43
+                                                # retangulo branco opcoes
+                                canvas:
+                                    Color:
+                                        rgba:220/255, 220/255, 220/255, 1
+                                    Rectangle:
+                                        size:951,387.5
+                                        pos:234.5,208.5
+
+                                BoxLayout:
+                                    orientation:'vertical'
+                                    id: janela_options
+                                    padding:[240,5,0,-20]
+
+                BoxLayout:                                   # Codigo aqui
+                    id: a51
+                                                            #retangulo cinza botao
+                    canvas:
+                        Color:
+                            rgba:180/255,180/255,180/255,1
+                        Rectangle:
+                            size:966,192.5
+                            pos:231.5,3.5
+
+                    BoxLayout:
+                        id: a52
+                                          #retangulo preto botao
+                        canvas:
+                            Color:
+                                rgba:0,0,0, 1
+                            Rectangle:
+                                size:953.5,189.5
+                                pos:233,7.2
+
+                        BoxLayout:
+                            id: a53                      #retangulo branco botao
+                            orientation:'horizontal'
+
+                            canvas:
+                                Color:
+                                    rgba:220/255, 220/255, 220/255, 1
+                                Rectangle:
+                                    size:951,187.5
+                                    pos:234.5,8.5
+
+                            BoxLayout:
+                                id: a54
+                                orientation:'horizontal'
+                                padding:[430,0,0,66]
+
+                                Label:
+                                    color:0,0,0,1
+                                    font_size:20
+                                    size_hint:None,None
+                                    text:'Voltar'
+
+                                BoxLayout:
+                                    padding:[0,0,0,30]
+
+                                    Button:
+                                        pos_hint_x:None
+                                        pos_hint_y:None
+                                        size_hint_x:None
+                                        size_hint_y:None
+                                        width:'35sp'
+                                        height:'35sp'
+                                        font_size:'25'                                                           #botao okzap
+                                        background_normal:'icons\\back.png'                                                                    #botao okzap
+                                        on_press:root.voltar2()
+                                        on_press:root.manager.current ='janela_opcoes'
+                                        border:0,0,0,0
+
+
+<opcoes>:
+    name:'opcoes'
+    padding:[-130,25,0,0]
+    botao:var
+    size_hint_y:None
+    height:self.minimum_height
+
+    canvas:
+        Color:
+            rgba:245/255,245/255,245/255,1
+
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint:None,None
+        height:self.minimum_height
+        height:35
+        width:550
+        spacing:330
+        padding:[0,13,0,0]
+
+        Button:
+            id:var
+            background_normal:'icons\\select.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            on_press:
+                texto = root.retorna_texto()
+                print(texto)
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3. Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta": root.retorna_posicao()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3. Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" : root.proxima_tela()
+            on_release:
+                texto = root.retorna_texto()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3. Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" : app.root.get_screen('principal').manager.current = 'janela_opcoes'
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3. Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" : app.root.get_screen('janela_opcoes').Opcoes_telas()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3. Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" : app.root.get_screen('janela_opcoes').setinha()
+
+        Label:
+            id:top
+            color:0,0,0,1
+                                  # texto da resposta
+        Button:
+            id:editar
+            background_normal:'icons\\edit.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            on_press: root.retorna_posicao(),root.retorna_texto(), root.abre_popup()
+
+
+<opcoes2>:
+    padding:[-130,25,0,0]
+    botao:var
+    size_hint_y:None
+    height:self.minimum_height
+
+    canvas:
+        Color:
+            rgba:245/255,245/255,245/255,1
+
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint:None,None
+        height:self.minimum_height
+        height:35
+        width:550
+        spacing:330
+        padding:[0,13,0,0]
+
+        Button:
+            background_normal:'icons\\select.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            id:var
+            on_press:
+                texto = root.retorna_texto()
+                tela = root.retorna_tela()
+                print(texto)
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3.Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" : root.retorna_posicao()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3.Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" and tela <= 2 : root.proxima_tela()
+            on_release:
+                tela = root.retorna_tela()
+                texto = root.retorna_texto()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3.Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" and  tela <= 3 : app.root.get_screen('principal').manager.current = 'janela_opcoes2'
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3.Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" and tela <= 3 : app.root.get_screen('janela_opcoes2').Opcoes_telas2()
+                if texto != "1. Adicionar Resposta" and texto!= "2. Adicionar Resposta" and texto!= "3.Adicionar Resposta" and texto != "4. Adicionar Resposta" and texto!= "5. Adicionar Resposta" and tela <= 3 : app.root.get_screen('janela_opcoes2').setinha()
+
+        Label:
+            id:top
+            color:0,0,0,1
+                                 # texto da resposta
+        Button:
+            id:editar
+            background_normal:'icons\\edit.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            on_press: root.retorna_posicao(),root.retorna_texto(), root.abre_popup()
+
+
+<opcoes3>:
+    padding:[-130,25,0,0]
+    botao:var
+    size_hint_y:None
+    height:self.minimum_height
+
+    canvas:
+        Color:
+            rgba:245/255,245/255,245/255,1
+
+    BoxLayout:
+        orientation:'horizontal'
+        size_hint:None,None
+        height:self.minimum_height
+        height:35
+        width:550
+        spacing:330
+        padding:[0,13,0,0]
+
+        Button:
+            id:var
+            background_normal:'icons\\select.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            on_press:
+                texto = root.retorna_texto()
+                tela = root.retorna_tela()
+                print(texto)
+                if texto != "Adicionar Opção de Resposta" and tela == 3 : root.retorna_posicao()
+
+        Label:
+            id:top
+            color:0,0,0,1                      # texto da resposta
+
+        Button:
+            id:editar
+            background_normal:'icons\\edit.png'
+            background_down:'select_press.png'
+            size_hint_x:None
+            size_hint_y:None
+            width:'25sp'
+            height: '25sp'
+            border:0,0,0,0
+            on_press:root.retorna_posicao(), root.retorna_texto(), root.abre_popup()
+
+
+<popupss>:
+    BoxLayout:
+        orientation:'vertical'
+
+        TextInput:
+            id:text_edit
+
+        Button:
+            id:button_edit
+            text:'Adicionar'
+            on_press:
+                root.retorna_texto()
+                app.root.get_screen('principal').update()
+                root.fecha_popup()
+
+
+<popupss2>:
+    BoxLayout:
+        orientation:'vertical'
+
+        TextInput:
+            id:text_edit
+
+        Button:
+            id:button_edit
+            text:'Adicionar'
+            on_press:
+                root.retorna_texto()
+                app.root.get_screen('janela_opcoes').update()
+                root.fecha_popup()
+
+
+<popupss3>:
+    BoxLayout:
+        orientation:'vertical'
+
+        TextInput:
+            id:text_edit
+
+        Button:
+            id:button_edit
+            text:'Adicionar'
+            on_press:
+                root.retorna_texto()
+                app.root.get_screen('janela_opcoes2').update()
+                root.fecha_popup()
+
+<popupssConexao>:
+    BoxLayout:
+        orientation:'horizontal'
+        Label:
+            id:conexao
+            text:'Conecte-se a Internet'
+
+<popupssDataErrada>:
+    BoxLayout:
+        orientation:'horizontal'
+
+        Label:
+            id:conexao
+            text:'Corrija a data do sistema'
+
+<popupssArquivoErrada>:
+    BoxLayout:
+        orientation:'horizontal'
+
+        Label:
+            id:Arquivo
+            text:'Contate o Administrador do Sistema'
+
+<popupssMac>:
+    BoxLayout:
+        orientation:'horizontal'
+
+        Label:
+            id:Mac
+            text:'Contate o Administrador do sistema'
+
+<popupssEmpresa>:
+    BoxLayout:
+        TextInput:
+            id:nome_estabelecimento
+        Button:
+            on_press:root.retorna_nome_estabelecimento()
