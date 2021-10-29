@@ -287,7 +287,6 @@ class KeyVerify(BoxLayout):
         skrp = validacao.sek1[qte_validacoes]
         kiu = Fernet(s112)
         se = str(kiu.decrypt(skrp)).strip("b''")
-        print('senha oficial', se)
         __senha_oficial__ = se
         __senha__ = self.ids.text_senha.text
 
@@ -571,7 +570,6 @@ class principal(Screen):
                 dia = dia + d
 
             verificacao_data_servidor = timecheck.compara_data_sistema()
-            print(ano,mes,dia)
             data_expiracao = validacao.data_final(datetime.date(int(ano), int(mes), int(dia)))
 
             if verificacao_data_servidor == 'Impossivel conectar a internet':

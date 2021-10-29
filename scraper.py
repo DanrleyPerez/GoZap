@@ -314,7 +314,7 @@ def responde_novas_mensagens(banco,client,estabelecimento):
                 resposta_dupla = gecko.find_elements_by_xpath("//div[@class='_1LcQK']//div[@class='_2wUmf _21bY5 message-out focusable-list-item']//span[@class='i0jNr selectable-text copyable-text']")
                 for i in resposta_dupla:
                     if i.text == 'Menu Principal':
-                        print("deu true aq ")
+
                         menu = True
             except:
                 pass
@@ -331,7 +331,6 @@ def responde_novas_mensagens(banco,client,estabelecimento):
             tamanholistnova = len(listnova)
             if menu == True:
                 tamanholistnova = tamanholistnova + 1
-            print(tamanholistnova)
 
             if tamanholistnova == 1:
                 tupla_respostas = escolhe_resposta(banco, '', '')

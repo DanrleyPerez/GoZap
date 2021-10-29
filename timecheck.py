@@ -65,6 +65,3 @@ def compara_data_sistema():
     except:
         mensagem = "Impossivel conectar a internet"
         return mensagem
-
-
-print(compara_data_sistema())
