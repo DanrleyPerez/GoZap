@@ -19,6 +19,9 @@ from GoZap import scraper, comandos_sql, docman
 import validacao
 import timecheck
 
+
+"""Mudança no branch master"""
+
 x = """ DOC """
 
 KIVY_NO_ARGS = 1
