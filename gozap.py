@@ -21,6 +21,8 @@ import timecheck
 
 x = """ DOC """
 
+"""MUDANCA GERADA """
+
 KIVY_NO_ARGS = 1
 
 s96 = b'8QtIYtGPAAWaWQVJiZ24nept7qAkseXLrqfjV6xptb4='
